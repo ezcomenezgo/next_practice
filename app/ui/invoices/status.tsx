@@ -1,8 +1,16 @@
+/*
+ * @Author:Claire Li
+ * @Date:2024-07-06 17:56:38
+ * @LastEditors:Claire Li
+ * @LastEditTime:2024-08-04 22:50:09
+ * @Description:
+ */
 import { CheckIcon, ClockIcon } from '@heroicons/react/24/outline';
 import clsx from 'clsx';
 
 export default function InvoiceStatus({ status }: { status: string }) {
   return (
+    // Using the clsx library to toggle class names
     <span
       className={clsx(
         'inline-flex items-center rounded-full px-2 py-1 text-xs',
