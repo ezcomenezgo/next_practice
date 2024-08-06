@@ -2,7 +2,7 @@
  * @Author:Claire Li
  * @Date:2024-07-06 17:56:38
  * @LastEditors:Claire Li
- * @LastEditTime:2024-08-06 10:49:55
+ * @LastEditTime:2024-08-06 14:20:14
  * @Description:
  */
 import { ArrowPathIcon } from '@heroicons/react/24/outline';
@@ -10,11 +10,9 @@ import clsx from 'clsx';
 import Image from 'next/image';
 import { lusitana } from '@/app/ui/fonts';
 import { LatestInvoice } from '@/app/lib/definitions';
-export default async function LatestInvoices({
-  latestInvoices,
-}: {
-  latestInvoices: LatestInvoice[];
-}) {
+import { fetchLatestInvoices } from '@/app/lib/data';
+export default async function LatestInvoices() {
+  const latestInvoices = await fetchLatestInvoices();
   return (
     <div className="flex w-full flex-col md:col-span-4">
       <h2 className={`${lusitana.className} mb-4 text-xl md:text-2xl`}>

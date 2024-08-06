@@ -2,10 +2,11 @@
  * @Author:Claire Li
  * @Date:2024-08-05 18:52:59
  * @LastEditors:Claire Li
- * @LastEditTime:2024-08-05 19:01:44
+ * @LastEditTime:2024-08-06 15:46:26
  * @Description:
  */
 import SideNav from "@/app/ui/dashboard/sidenav";
+export const experimental_ppr = true;
 
 export default function Layout({children}: {children: React.ReactNode}) {
   return (
